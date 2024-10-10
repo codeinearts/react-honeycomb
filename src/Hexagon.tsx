@@ -2,7 +2,7 @@ import * as React from "react";
 import { HoneycombContext } from "./helpers";
 import type { HexagonProps } from "./types";
 
-const Hexagon: React.FC<HexagonProps> = ({
+const Hexagon: React.FC<React.PropsWithChildren<HexagonProps>> = ({
   children,
   className,
   style = {},

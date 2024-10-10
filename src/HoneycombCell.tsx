@@ -1,7 +1,7 @@
 import * as React from "react";
 import { HoneycombCellProps } from "./types";
 
-const HoneycombCell: React.FC<HoneycombCellProps> = ({
+const HoneycombCell: React.FC<React.PropsWithChildren<HoneycombCellProps>> = ({
   children,
   row,
   column,

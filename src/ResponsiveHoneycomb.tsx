@@ -6,12 +6,9 @@ import { getGridColumnsCount } from "./helpers";
 
 import type { ResponsiveHoneycombProps } from "./types";
 
-const ResponsiveHoneycomb: React.FC<ResponsiveHoneycombProps> = ({
-  children,
-  size,
-  defaultWidth,
-  ...restProps
-}) => {
+const ResponsiveHoneycomb: React.FC<
+  React.PropsWithChildren<ResponsiveHoneycombProps>
+> = ({ children, size, defaultWidth, ...restProps }) => {
   const containerRef = React.useRef<HTMLUListElement>(null);
   const [columns, setColumns] = React.useState(
     getGridColumnsCount(size, defaultWidth)
